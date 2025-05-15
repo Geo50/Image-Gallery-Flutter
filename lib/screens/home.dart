@@ -20,6 +20,10 @@ class _HomeState extends State<Home> {
           "A sleek fighter jet tears through the clouds, a symbol of cutting-edge technology and aerial supremacy. This image encapsulates speed, precision, and the raw power of modern air combat.",
       assetURI: "assets/jet.jpeg",
       isFavorite: false,
+      category: 'Fantasy',
+      artist: 'Evelyn Sky',
+      location: 'Digital Art',
+      uploadDate: DateTime(2025, 5, 10),
     ),
     ImageDefinition(
       id: "2",
@@ -28,6 +32,10 @@ class _HomeState extends State<Home> {
           "A radiant angel poised between heaven and earth, wings outstretched in divine grace. This image captures the serene power and otherworldly presence of a celestial being, symbolizing hope, protection, and the eternal battle between light and darkness.",
       assetURI: "assets/angel.jpeg",
       isFavorite: false,
+      category: 'Fantasy',
+      artist: 'Evelyn Sky',
+      location: 'Digital Art',
+      uploadDate: DateTime(2025, 5, 10),
     ),
     ImageDefinition(
       id: "3",
@@ -36,6 +44,46 @@ class _HomeState extends State<Home> {
           "A fearsome Spartan warrior stands resolute in bronze armor, spear in hand and gaze fixed with unwavering resolve. This portrayal honors the unbreakable spirit and disciplined might of ancient Sparta’s legendary soldiers.",
       assetURI: "assets/spartan.png",
       isFavorite: false,
+      category: 'Fantasy',
+      artist: 'Evelyn Sky',
+      location: 'Digital Art',
+      uploadDate: DateTime(2025, 5, 10),
+    ),
+    ImageDefinition(
+      id: "4",
+      title: "Forest Sentinel",
+      description:
+          "An ancient tree towers above the misty forest floor, its roots entwined with moss and mystery. This piece evokes the quiet majesty and enduring strength of nature’s guardians.",
+      assetURI: "assets/forest.jpeg",
+      isFavorite: false,
+      category: 'Nature',
+      artist: 'Noah Elm',
+      location: 'Canada',
+      uploadDate: DateTime(2025, 3, 19),
+    ),
+    ImageDefinition(
+      id: "5",
+      title: "Cyber Ronin",
+      description:
+          "A lone samurai in futuristic armor patrols a neon-lit alley, blending ancient honor with digital rebellion. This artwork fuses tradition and tech in a striking cyberpunk vision.",
+      assetURI: "assets/cyber.jpeg",
+      isFavorite: false,
+      category: 'Sci-Fi',
+      artist: 'Yuki Tanaka',
+      location: 'Tokyo',
+      uploadDate: DateTime(2025, 5, 5),
+    ),
+    ImageDefinition(
+      id: "6",
+      title: "Lighthouse in the Storm",
+      description:
+          "Waves crash against jagged rocks as a solitary lighthouse beams defiantly through the tempest. A dramatic tribute to resilience and guidance in the face of chaos.",
+      assetURI: "assets/lighthouse.jpeg",
+      isFavorite: false,
+      category: 'Seascape',
+      artist: 'Clara Wren',
+      location: 'Ireland',
+      uploadDate: DateTime(2025, 4, 14),
     ),
   ];
 

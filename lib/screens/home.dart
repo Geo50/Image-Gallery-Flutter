@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_gallery/reusable_widgets/image_card.dart';
 import 'package:image_gallery/screens/details_screen.dart';
+import 'package:image_gallery/screens/favorites_screen.dart';
 import 'package:image_gallery/services/image_definition.dart';
 
 class Home extends StatefulWidget {
@@ -18,6 +19,7 @@ class _HomeState extends State<Home> {
       description:
           "A sleek fighter jet tears through the clouds, a symbol of cutting-edge technology and aerial supremacy. This image encapsulates speed, precision, and the raw power of modern air combat.",
       assetURI: "assets/jet.jpeg",
+      isFavorite: false,
     ),
     ImageDefinition(
       id: "2",
@@ -25,6 +27,7 @@ class _HomeState extends State<Home> {
       description:
           "A radiant angel poised between heaven and earth, wings outstretched in divine grace. This image captures the serene power and otherworldly presence of a celestial being, symbolizing hope, protection, and the eternal battle between light and darkness.",
       assetURI: "assets/angel.jpeg",
+      isFavorite: false,
     ),
     ImageDefinition(
       id: "3",
@@ -32,6 +35,7 @@ class _HomeState extends State<Home> {
       description:
           "A fearsome Spartan warrior stands resolute in bronze armor, spear in hand and gaze fixed with unwavering resolve. This portrayal honors the unbreakable spirit and disciplined might of ancient Sparta’s legendary soldiers.",
       assetURI: "assets/spartan.png",
+      isFavorite: false,
     ),
   ];
 
@@ -48,6 +52,19 @@ class _HomeState extends State<Home> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => FavoritesScreen(allImages: imageGallery),
+                ),
+              );
+            },
+            icon: Icon(Icons.storage, color: Colors.amber),
+          ),
+        ],
       ),
       body: ListView.builder(
         padding: EdgeInsets.only(top: 20), // instead of using a SizedBox
@@ -62,6 +79,7 @@ class _HomeState extends State<Home> {
                   builder: (_) => DetailsScreen(item: imageGallery[index]),
                 ),
               );
+              setState(() {});
             },
           );
         },
